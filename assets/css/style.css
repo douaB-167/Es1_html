@@ -1,21 +1,43 @@
 *, ::after, ::before{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 } 
 
 h1, h2, h3{
     color: blue;
 }
 
-nav{
-    display: flex;
-    height: 30px;
-    background-color: blue;
-    color: white;
-    justify-content: flex-start;
-    align-content: space-around;
+body {
+    margin: 0;
+    padding: 0;
 }
 
-a.nav:link, a.nav:hover, a.nav:visited{
+/* HEADER E NAV */
+header {
+    background-color: blue;
+    color: white;
+    padding: 0.5em 0;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    background-color: blue;
+    padding: 10px 0;;
+}
+
+a.nav {
+    text-decoration: none;
+    color: white;
+}
+
+a.email:link, 
+a.email:hover, 
+a.email:visited {
     color: white;
 }
 
@@ -35,74 +57,68 @@ a.nav:link, a.nav:hover, a.nav:visited{
 .col-12 {width: 100%}
 
 [class^="col-"] {
-    flex-shrink: 1; /* impediamo al box di restringersi */
-    flex-grow: 0; /* valore di default, il box non si espande */
+    flex-shrink: 1; 
+    flex-grow: 0;
     padding-right: 15px;
     padding-left: 15px
 }
 
+/* CONTENITORI */
 .container1 {
     display: flex;
-    flex-flow: column wrap;
-    height: 300px;
+    flex-wrap: wrap;
     align-items: center;
-    flex: 1 0 auto;
-    background-color: lightgrey;
-
+    background-color: lightgray;
+    padding: 20px;
 }
 
 .container2 {
     display: flex;
-    flex-flow: column wrap;
-    height: 300px;
+    flex-wrap: wrap;
     align-items: center;
-    flex: 1 1 auto;
     background-color: white;
-
-
+    padding: 20px;
 }
 
-.container3{
+.container3 {
+    background-color: white;
+    padding: 20px;
+    gap: 10px;
+}
+
+.container4 {
+    background-color: lightgray;
+    padding: 20px;
+    gap: 10px;
+}
+
+.container5 {
+    background-color: white;
+    padding: 20px;
+    gap: 10px;
     display: flex;
-    flex-flow: row wrap;
-    height: 300px;
-    justify-content: center;
-    background-color: lightgrey;
+    align-content: center;
 }
 
 .row{
     display: flex;
     flex-wrap: wrap;
-    margin-right: 15px;
-    margin-left: 15px;
+    margin: 0 -15;
 }
 
-.container4{
-    display: flex;
-    flex-flow: row wrap;
-    height: 300px;
-    justify-content: center;
+.col{
+    margin: 0 -15;
 }
 
-li {
-    border: 1px solid black;
-}
-
-.container5{
-    display: flex;
-    flex-flow: column nowrap;
-    height: 300px;
-    justify-content: center;
-    background-color: lightgrey;
-}
-
+/* TABELLA */
 table, td{
     border-collapse: collapse;
     border: 1px solid black;
 }
 
 th{
-    border-collapse: collapse;
+    background-color: blue;
+    color: white;
     border: 1px solid white;
 }
 
@@ -111,12 +127,36 @@ th, td {
   text-align: left;
 }
 
-th{
+/* UL CARTE PERSONAGGI */
+.container3 ul {
+    list-style-type: none;
+    padding: 10px;
+}
+
+.container3 li {
+    margin-bottom: 5px;
+}
+
+div > ul { /* figli diretti del precedente */
+    border: 2px solid blue;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    width: 100%
+}
+
+input[type="submit"]{
     background-color: blue;
     color: white;
+    padding: 10px;
 }
 
 footer{
     background-color: black;
     color: white;
+    text-align: center;
+    /* serve per metterli uno di fianco all'altro */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px;
 }
